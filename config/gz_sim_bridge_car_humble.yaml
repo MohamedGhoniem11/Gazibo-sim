@@ -1,0 +1,67 @@
+# gz_sim_bridge_car_humble.yaml
+# Humble-compatible copy of the assignment bridge config.
+# Compatibility change vs PDF: gz.msgs.* -> ignition.msgs.* (Gazebo Fortress).
+# ROS topic names are unchanged from the assignment.
+
+# -------------------------------------------------------------------
+# System Clock
+# -------------------------------------------------------------------
+- gz_topic_name: "/clock"
+  ros_topic_name: "/clock"
+  gz_type_name: "ignition.msgs.Clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  direction: GZ_TO_ROS
+
+# -------------------------------------------------------------------
+# Control & Motion
+# -------------------------------------------------------------------
+- gz_topic_name: "/cmd_vel"
+  ros_topic_name: "/cmd_vel"
+  gz_type_name: "ignition.msgs.Twist"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  direction: ROS_TO_GZ
+
+- gz_topic_name: "/model/prius_hybrid/odometry"
+  ros_topic_name: "/odom"
+  gz_type_name: "ignition.msgs.Odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  direction: GZ_TO_ROS
+
+- gz_topic_name: "/model/prius_hybrid/tf"
+  ros_topic_name: "/tf"
+  gz_type_name: "ignition.msgs.Pose_V"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  direction: GZ_TO_ROS
+
+# -------------------------------------------------------------------
+# Camera Sensors
+# -------------------------------------------------------------------
+- gz_topic_name: "/front_camera"
+  ros_topic_name: "/prius/front_camera/image_raw"
+  gz_type_name: "ignition.msgs.Image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  direction: GZ_TO_ROS
+
+- gz_topic_name: "/back_camera"
+  ros_topic_name: "/prius/back_camera/image_raw"
+  gz_type_name: "ignition.msgs.Image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  direction: GZ_TO_ROS
+
+- gz_topic_name: "/left_camera"
+  ros_topic_name: "/prius/left_camera/image_raw"
+  gz_type_name: "ignition.msgs.Image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  direction: GZ_TO_ROS
+
+- gz_topic_name: "/right_camera"
+  ros_topic_name: "/prius/right_camera/image_raw"
+  gz_type_name: "ignition.msgs.Image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  direction: GZ_TO_ROS
+
+- gz_topic_name: "/camera_info"
+  ros_topic_name: "/prius/camera_info"
+  gz_type_name: "ignition.msgs.CameraInfo"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  direction: GZ_TO_ROS

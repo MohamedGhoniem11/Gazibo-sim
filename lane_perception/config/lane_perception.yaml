@@ -1,0 +1,24 @@
+lane_detector:
+  ros__parameters:
+    camera_topic: /prius/front_camera/image_raw
+    roi_top_ratio: 0.45
+    roi_bottom_ratio: 0.88
+    lookahead_ratio: 0.28
+    yellow_h_low: 10
+    yellow_h_high: 45
+    yellow_s_low: 30
+    yellow_v_low: 28
+    yellow_v_high: 210
+    hls_l_low: 16
+    hls_s_low: 18
+    barrier_l_low: 140
+    barrier_s_high: 55
+    blur_kernel: 5
+    minimum_lane_pixels: 40
+    min_side_pixels: 30
+    expected_lane_width_ratio: 0.62
+    target_offset_ratio: 0.0
+    smoothing_factor: 0.32
+    confidence_pixel_scale: 600.0
+    debug_enabled: true
+    debug_image_topic: /lane/debug_image

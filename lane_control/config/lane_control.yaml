@@ -1,0 +1,17 @@
+lane_controller:
+  ros__parameters:
+    base_speed: 4.0
+    minimum_speed: 1.6
+    maximum_speed: 6.0
+    kp: 1.6
+    ki: 0.0
+    kd: 0.28
+    maximum_angular_speed: 0.55
+    confidence_threshold: 0.05
+    lost_lane_timeout: 1.8
+    lost_hold_steer_time: 1.4
+    perception_timeout: 0.8
+    steering_smoothing: 0.40
+    curve_slowdown_factor: 2.0
+    control_rate_hz: 20.0
+    error_deadzone: 0.0
