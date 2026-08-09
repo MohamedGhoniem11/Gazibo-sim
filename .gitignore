@@ -1,0 +1,33 @@
+# Colcon / ROS
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# ROS bags (upload separately; link in README)
+*.bag
+*.db3
+metadata.yaml
+cmd_vel_bag/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local extracts / notes
+*.png
+_*.txt
+_*.py
+# Keep Python package markers
+!**/__init__.py
